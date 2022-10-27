@@ -1,4 +1,6 @@
 <?php
+
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -11,8 +13,7 @@ error_reporting(E_ALL);
 	);
 	// Run the commands for output
 	$output = '';
-    $log = "";
-    //$log .= "php://input";
+
 	foreach($commands AS $command){
 		// Run it
 		$tmp = exec($command);
@@ -21,11 +22,6 @@ error_reporting(E_ALL);
 		$output .= htmlentities(trim($tmp)) . "\n";
 	}
 
-   // log($log);
-
-    function log($msg){
-        file_put_contents("log.txt" . $msg);
-    }
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US">
