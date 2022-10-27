@@ -1,5 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 	$commands = array(
 	'git fetch --all',
@@ -10,7 +12,7 @@
 	// Run the commands for output
 	$output = '';
     $log = "";
-    $log .= "php://input";
+    //$log .= "php://input";
 	foreach($commands AS $command){
 		// Run it
 		$tmp = exec($command);
@@ -19,7 +21,7 @@
 		$output .= htmlentities(trim($tmp)) . "\n";
 	}
 
-    log($log);
+   // log($log);
 
     function log($msg){
         file_put_contents("log.txt" . $msg);
