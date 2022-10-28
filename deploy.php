@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$input = "php://input";
+//$input = "php://input";
 
 	$commands = array(
 	'git fetch --all',
