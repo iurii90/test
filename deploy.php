@@ -24,10 +24,6 @@ error_reporting(E_ALL);
 		$output .= htmlentities(trim($tmp)) . "\n";
 	}
 
-  //  log($input);
-    function log($log){
-        file_put_contents("log.txt", print_r($log));
-    }
 
 ?>
 <!DOCTYPE HTML>
