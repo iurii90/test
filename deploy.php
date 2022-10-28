@@ -24,7 +24,7 @@ $input = "php://input";
 		$output .= htmlentities(trim($tmp)) . "\n";
 	}
 
-    log($input);
+  //  log($input);
     function log($log){
         file_put_contents("log.txt", print_r($log));
     }
