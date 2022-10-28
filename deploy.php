@@ -1,9 +1,10 @@
 <?php
-
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+$input = "php://input";
+file_put_contents("log.txt", json_encode($input));
 
 $commands = array('git fetch --all', 'git reset --hard origin/main', 'git pull origin main', 'echo 123');
 $output = '';
