@@ -5,8 +5,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//$input = "php://input";
-
 	$commands = array(
 	'git fetch --all',
 	'git reset --hard origin/main',
@@ -23,7 +21,6 @@ error_reporting(E_ALL);
 		$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
 		$output .= htmlentities(trim($tmp)) . "\n";
 	}
-
 
 ?>
 <!DOCTYPE HTML>
