@@ -4,9 +4,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $input = file_get_contents("php://input");
-file_put_contents("log.txt", var_dump($input));
+file_put_contents("log.txt", ($input));
 
-file_put_contents("log_post.txt", var_dump($_POST));
+file_put_contents("log_post.txt", ($_POST));
 
 $commands = array('git fetch --all', 'git reset --hard origin/main', 'git pull origin main', 'echo 123');
 $output = '';
